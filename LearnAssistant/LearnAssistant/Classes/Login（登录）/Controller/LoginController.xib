@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController">
+            <connections>
+                <outlet property="account" destination="LYr-p4-NuF" id="L8a-HH-3Xi"/>
+                <outlet property="login" destination="94P-fN-TmG" id="Egr-hG-Dty"/>
+                <outlet property="password" destination="pcU-0p-UFw" id="Xwu-r2-3WA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="邮箱或手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LYr-p4-NuF">
+                    <rect key="frame" x="50" y="200" width="275" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pcU-0p-UFw">
+                    <rect key="frame" x="50" y="272" width="275" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94P-fN-TmG">
+                    <rect key="frame" x="50" y="340" width="275" height="30"/>
+                    <color key="backgroundColor" red="0.32096592837914217" green="0.7763103687878341" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="4VH-uG-FH4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yG-go-AYK">
+                    <rect key="frame" x="50" y="568" width="52" height="52"/>
+                    <state key="normal" title="Button" image="share_QQ"/>
+                    <connections>
+                        <action selector="qqLogin:" destination="-1" eventType="touchUpInside" id="b19-a3-oLh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8D-El-p1d">
+                    <rect key="frame" x="161" y="568" width="52" height="52"/>
+                    <state key="normal" title="Button" image="share_sina"/>
+                    <connections>
+                        <action selector="sinaLogin:" destination="-1" eventType="touchUpInside" id="7Ye-s9-xDw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C06-HS-ZsM">
+                    <rect key="frame" x="273" y="568" width="52" height="52"/>
+                    <state key="normal" title="Button" image="share_wexin"/>
+                    <connections>
+                        <action selector="wechatLogin:" destination="-1" eventType="touchUpInside" id="RgD-pz-QLf"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QQ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-Fw-NXl">
+                    <rect key="frame" x="50" y="628" width="52" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="微博" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHv-eP-hUv">
+                    <rect key="frame" x="161" y="628" width="52" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="微信" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0g-ko-NX9">
+                    <rect key="frame" x="273" y="628" width="52" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="社交账号登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lg-X7-7bb">
+                    <rect key="frame" x="134" y="522" width="106" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学习助手" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnx-ne-SQO">
+                    <rect key="frame" x="57" y="70" width="260" height="77"/>
+                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="34"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dva-fP-URV">
+                    <rect key="frame" x="256" y="378" width="69" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="注册">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="registerAccount:" destination="-1" eventType="touchUpInside" id="hCy-d6-fHn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="94P-fN-TmG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="5oj-Mu-cSq"/>
+                <constraint firstAttribute="trailing" secondItem="LYr-p4-NuF" secondAttribute="trailing" constant="50" id="9Ib-TQ-F4R"/>
+                <constraint firstItem="94P-fN-TmG" firstAttribute="top" secondItem="pcU-0p-UFw" secondAttribute="bottom" constant="40" id="JCt-11-4DY"/>
+                <constraint firstItem="pcU-0p-UFw" firstAttribute="width" secondItem="LYr-p4-NuF" secondAttribute="width" id="Q7a-o4-Y1b"/>
+                <constraint firstAttribute="trailing" secondItem="94P-fN-TmG" secondAttribute="trailing" constant="50" id="mvb-Sq-kgF"/>
+                <constraint firstItem="pcU-0p-UFw" firstAttribute="top" secondItem="LYr-p4-NuF" secondAttribute="bottom" constant="40" id="t54-7g-uTs"/>
+                <constraint firstItem="LYr-p4-NuF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="uNm-j8-jbg"/>
+                <constraint firstItem="pcU-0p-UFw" firstAttribute="leading" secondItem="LYr-p4-NuF" secondAttribute="leading" id="uks-oy-cO4"/>
+                <constraint firstItem="LYr-p4-NuF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="wVI-cH-Fkx"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="451.5" y="114.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="share_QQ" width="52" height="52"/>
+        <image name="share_sina" width="52" height="52"/>
+        <image name="share_wexin" width="52" height="52"/>
+    </resources>
+</document>

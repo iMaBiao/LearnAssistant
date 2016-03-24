@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>planCycle</key>
+		<string>1</string>
+		<key>planNum</key>
+		<string>1</string>
+		<key>planContent</key>
+		<string>要看完iOS开发这本书</string>
+		<key>planDate</key>
+		<string>2016-1-5</string>
+	</dict>
+	<dict>
+		<key>planCycle</key>
+		<string>2</string>
+		<key>planNum</key>
+		<string>2</string>
+		<key>planContent</key>
+		<string>复习各科知识，准备考试</string>
+		<key>planDate</key>
+		<string>2015-12-26</string>
+	</dict>
+	<dict>
+		<key>planCycle</key>
+		<string>3</string>
+		<key>planNum</key>
+		<string>3</string>
+		<key>planContent</key>
+		<string>背诵第一单元单词，并默写</string>
+		<key>planDate</key>
+		<string>2015-12-20</string>
+	</dict>
+</array>
+</plist>

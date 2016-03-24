@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>icon</key>
+		<string>book6</string>
+		<key>name</key>
+		<string>一号人物</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>book7</string>
+		<key>name</key>
+		<string>三体</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>book5</string>
+		<key>name</key>
+		<string>民国外交事</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>book8</string>
+		<key>name</key>
+		<string>惊奇物语</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>book9</string>
+		<key>name</key>
+		<string>零售的哲学</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>book10</string>
+		<key>name</key>
+		<string>资本圈</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>book11</string>
+		<key>name</key>
+		<string>可视化未来</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>book12</string>
+		<key>name</key>
+		<string>游戏改变世界</string>
+	</dict>
+</array>
+</plist>

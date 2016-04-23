@@ -62,11 +62,30 @@
 }
 
 
+//首先被启动的应用需要向iPhone注册一个自定义URL协议。这是在你的项目文件夹的info.plist文件进行的（就是你改变应用程序图标的同一个文件）。
+//Step1.选择“URL types”
+//Step3. 打开“Item 0″,然后为该key增加一个URL identifier。可以是任何值，但建议用“反域名”(例如 “com.fcplayer.testHello”)。
+//Step4. 在“Item 0”下再加一行。
+//Step5. 选择“URL Schemes” 作为Key。
+//Step6. 输入你的URL协议名 (例如“testHello://” 应写做“testHello”)。如果有必要，你可以在这里加入多个协议。
+
 - (IBAction)qqLogin:(id)sender {
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"提示"                                                                       message:@"打开应用QQ"                                                               preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction2 = [UIAlertAction actionWithTitle:@"打开" style:UIAlertActionStyleDefault                                                               handler:^(UIAlertAction * action) {
-        [MBProgressHUD showMessage:@"未安装QQ"];
+        UIApplication *app = [UIApplication sharedApplication];
+        //打开系统的设置页
+//        NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        NSURL *url = [NSURL URLWithString:@"mabiao://com.mabiaoRefresh.test"];
+        if ([app canOpenURL:url]) {
+            [app openURL:url];
+        }
+        else{
+            [MBProgressHUD showMessage:@"未安装QQ"];
+        }
+        
+        
+
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUD];
         });

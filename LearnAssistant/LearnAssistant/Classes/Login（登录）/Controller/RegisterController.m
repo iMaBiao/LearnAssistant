@@ -31,14 +31,25 @@
 
 - (IBAction)zhuce:(id)sender {
     [self.view endEditing:YES];
+    if (self.account.text.length ==0 ||self.pwd1.text.length == 0 ) {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"警告"                                                                       message:@"请输入完整的账号或密码"                                                               preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* defaultAction1 = [UIAlertAction actionWithTitle:@"重新输入" style:UIAlertActionStyleDefault                                                               handler:^(UIAlertAction * action) {
+            self.pwd1.text = nil;
+            self.pwd2.text = nil;
+        }];
+        [alert addAction:defaultAction1];
+        [self presentViewController:alert animated:YES completion:nil];
+        return;
+    }
     if ([self.pwd1.text isEqualToString:self.pwd2.text]) {
+        
         
         NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
         [defaults setObject:self.account.text forKey:@"account"];
         [defaults setObject:self.pwd1.text forKey:@"pwd"];
         [defaults synchronize];
         
-         [UIApplication sharedApplication].keyWindow.rootViewController = [[MbTabBarController alloc] init];
+    [UIApplication sharedApplication].keyWindow.rootViewController = [[MbTabBarController alloc] init];
     }else{
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"警告"                                                                       message:@"两次密码输入不相同"                                                               preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* defaultAction1 = [UIAlertAction actionWithTitle:@"重新输入" style:UIAlertActionStyleDefault                                                               handler:^(UIAlertAction * action) {

@@ -10,6 +10,8 @@
 #import "PlanCell.h"
 #import "Plan.h"
 #import "AddPlanController.h"
+#import "MJRefresh.h"
+
 #define planColor [UIColor colorWithRed:34/255.0 green:161/255.0 blue:218/255.0 alpha:1.0]
 
 @interface MbLearnController ()<UITableViewDataSource,UITableViewDelegate>
@@ -46,6 +48,18 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //下拉刷新
+    __unsafe_unretained UITableView *tableView = self.planView;
+    __unsafe_unretained NSMutableArray *datas  =  self.planList;
+    self.planView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            //结束刷新
+            [tableView reloadData];
+            [tableView.mj_header endRefreshing];
+            
+        });
+    }];
+    
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     //添加学习计划View
